@@ -11,64 +11,149 @@
             text-align: center;
             padding: 20px;
             color: #333;
+            line-height: 1.6;
         }
-        .header { font-size: 2em; margin-bottom: 10px; }
-        .subheader { font-size: 1.2em; margin: 10px 0; }
-        .clock { font-size: 1.5em; font-weight: bold; color: #ff69b4; margin: 20px 0; }
-        .bio { max-width: 600px; margin: 0 auto; line-height: 1.6; }
-        .links { margin: 20px 0; }
+        .header {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .subheader {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .time-section {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .clock {
+            font-weight: bold;
+            color: #ff69b4;
+        }
+        .bio {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .bio p {
+            margin-bottom: 15px;
+        }
         .links a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            background: #ff69b4;
-            color: white;
+            color: #ff69b4;
             text-decoration: none;
-            border-radius: 20px;
         }
-        .playlists { margin-top: 30px; }
-        .gifs { margin: 20px 0; }
-        .badges img { margin: 5px; }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .user-count {
+            font-style: italic;
+            margin: 20px 0;
+        }
+        .playlists {
+            margin-top: 30px;
+            font-size: 1.1em;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .playlist-songs {
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        .playlist-songs p {
+            margin: 5px 0;
+        }
+        .divider {
+            border: none;
+            height: 1px;
+            background: #ccc;
+            margin: 20px 0;
+        }
+        .cute-text {
+            font-size: 1.1em;
+            margin: 15px 0;
+        }
+        .gifs img {
+            margin: 10px;
+        }
+        .badges img {
+            margin: 5px;
+        }
     </style>
 </head>
 <body>
     <div class="header">🐇 Light 🐇</div>
     <div class="subheader">・———— ・ ✦ Light Selene ✦ ・———— ・</div>
-    
-    <div class="clock" id="clock"></div>
-    <div>+1 CEST</div>
-    
-    <p>Hey, thats me ૮ ˶ᵔ ᵕ ᵔ˶ ა</p>
-    
-    <div class="bio">
-        <p><strong>Birthday</strong><br>23rd August 2007</p>
-        <p><strong>Currently doing nothing...</strong></p>
-        <p>My Name is Light, i'm a guy from Germany. I went to the Hochschule Mannheim for a whole 3 Semesters of Computer Science. I quit in 2024 and now do vocational training for servers and network stuff. My Linux journey started in 2016 while i started Docker in 2022.</p>
-        <p>Additionally I write Yuri webnovels and read books in my free time. I'm mildly obsessed with Vector from Girls Frontline and Symboli Rudolf from Umamusume. I love everything with stars and planets and space in general.</p>
-        <p>If you want to know what i play you can find Steam profile or my entire music history on these sites as well as under here in the discord status.</p>
-        <p>0 User's connected</p>
+
+    <div class="time-section">
+        <strong>Current Local Time</strong><br>
+        <span class="clock" id="clock"></span> +1 CEST
     </div>
-    
+
+    <p class="cute-text">Hey, thats me ૮ ˶ᵔ ᵕ ᵔ˶ ა</p>
+
+    <strong>Birthday</strong><br>
+    23rd August 2007
+
+    <p><strong>Currently doing nothing...</strong></p>
+
+    <div class="bio">
+        <p>My Name is Light, i'm a guy from Germany. I went to the <a href="https://www.hs-mannheim.de/" class="links">Hochschule Mannheim</a> for a whole 3 Semesters of Computer Science. I quit in 2024 and now do vocational training for servers and network stuff. My Linux journey started in 2016 while i started Docker in 2022.</p>
+        <p>Additionally I write <a href="https://archiveofourown.org/users/yourusername" class="links">Yuri webnovels</a> and read books in my free time. I'm midly obssessed with Vector from Girls Frontline and Symboli Rudolf from Umamusume. I love everything with stars and planets and space in general.</p>
+        <p>If you want to know what i play you can find <a href="[Your Steam URL, e.g., https://steamcommunity.com/id/yourname]" class="links">Steam profile</a> or my <a href="https://koito.egirl.ing/" class="links">entire music history</a> on these sites as well as under here in the discord status.</p>
+    </div>
+
+    <div class="user-count">0 User's connected</div>
+
     <!-- Discord Status -->
     <div>
         <img src="https://lanyard-profile-readme.vercel.app/api/YOUR_DISCORD_ID?theme=dark" alt="Discord Status">
     </div>
-    
+
     <div class="playlists">
         ✦•┈๑⋅⋯ My playlists ⋯⋅๑┈·✦
-        <br>
-        <a href="[Your Steam URL, e.g., https://steamcommunity.com/id/yourname]">Steam</a> |
-        <a href="[Your Playlist 1 URL  https://open.spotify.com/playlist/39fdnhHDN9tdXxPILJUyPN?si=tS4BYkhmTGeNyDeOJ5e1Bw]">Playlist 1</a> |
-        <a href="[Your Playlist 2 URL https://open.spotify.com/playlist/6LlQcsrU0WjWvhfT9UqJwT?si=EK3mfXg9QBm0p1yNj0BmrA]">Playlist 2</a> |
-        <a href="https://scrobble.egirl.ing">LastFM</a>
+        <hr class="divider">
+        <a href="https://open.spotify.com/playlist/39fdnhHDN9tdXxPILJUyPN?si=tS4BYkhmTGeNyDeOJ5e1Bw" class="links">Manipulate</a> |
+        <a href="https://open.spotify.com/playlist/6LlQcsrU0WjWvhfT9UqJwT?si=EK3mfXg9QBm0p1yNj0BmrA" class="links">Playlist 2</a> |
+        <a href="[Your Steam URL, e.g., https://steamcommunity.com/id/yourname]" class="links">Steam</a> |
+        <a href="https://scrobble.egirl.ing" class="links">LastFM</a>
+        <div class="playlist-songs">
+            <p><strong>Manipulate Playlist</strong></p>
+            <p>Like A Drug - Jordyne, SWIM</p>
+            <p>Manipulate - mxze, Clarei</p>
+            <p>Bleed - Connor Kauffman</p>
+            <p>Ride for Me - Daniel Di Angelo</p>
+            <p>Talk Dirty - Daniel Di Angelo</p>
+            <p>Outta my head - Omido, Rick Jansen, Ordell</p>
+            <p>Advantage - Daniel Di Angelo</p>
+            <p>PLEASE - Omido, Ex Habit</p>
+            <p>Bad for Me - Always Never</p>
+            <p>Secrets - Omido, Ordell, Rick Jansen</p>
+            <p>BAD IDEA - Chris Grey</p>
+            <p>ONE MORE NIGHT - Chris Grey</p>
+            <p>Right Ways - Nick Alexandr</p>
+            <p>In Private - Daniel Di Angelo</p>
+            <p>DANGEROUS GAME - Chris Grey</p>
+            <p>Fumes - Oscen</p>
+            <p>Death of Me - WizTheMc</p>
+            <p>stalker - Stevie Howie</p>
+            <p>Therapy - VOILÀ</p>
+            <p>COLOR ME BLUE - GRANT KNOCHE</p>
+            <p>Searing - Imaginary Ambition</p>
+            <p>Try Me - The Weeknd</p>
+            <p>First - SoMo</p>
+            <p>DEVIL IN DISGUISE - EIGHTYEIGHTWAV</p>
+            <p>Temptations - Daniel Di Angelo</p>
+            <p>The Room - Jaymie Deville</p>
+        </div>
     </div>
-    
-    <!-- GIFs from Your Previous Request -->
+
+    <!-- GIFs -->
     <div class="gifs">
         <img src="https://media.giphy.com/media/IXnygGeB6LPPi/giphy.gif" alt="Cyber Vibe" width="200">
         <img src="https://media.giphy.com/media/RDZo7znAdn2u7sAcWH/giphy.gif" alt="Hacking Mode" width="200">
     </div>
-    
+
     <!-- Cybersecurity Badges -->
     <div class="badges">
         <img src="https://img.shields.io/badge/-Python-3776AB?logo=python" alt="Python">
