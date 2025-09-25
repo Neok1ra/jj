@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light's Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #f0f8ff, #e6e6fa);
+            text-align: center;
+            padding: 20px;
+            color: #333;
+        }
+        .header { font-size: 2em; margin-bottom: 10px; }
+        .subheader { font-size: 1.2em; margin: 10px 0; }
+        .clock { font-size: 1.5em; font-weight: bold; color: #ff69b4; margin: 20px 0; }
+        .bio { max-width: 600px; margin: 0 auto; line-height: 1.6; }
+        .links { margin: 20px 0; }
+        .links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #ff69b4;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+        .playlists { margin-top: 30px; }
+        .gifs { margin: 20px 0; }
+        .badges img { margin: 5px; }
+    </style>
+</head>
+<body>
+    <div class="header">🐇 Light 🐇</div>
+    <div class="subheader">・———— ・ ✦ Light Selene ✦ ・———— ・</div>
+    
+    <div class="clock" id="clock"></div>
+    <div>+1 CEST</div>
+    
+    <p>Hey, thats me ૮ ˶ᵔ ᵕ ᵔ˶ ა</p>
+    
+    <div class="bio">
+        <p><strong>Birthday</strong><br>3rd August 2004</p>
+        <p><strong>Currently doing nothing...</strong></p>
+        <p>My Name is Light, i'm a guy from Germany. I went to the Hochschule Mannheim for a whole 3 Semesters of Computer Science. I quit in 2024 and now do vocational training for servers and network stuff. My Linux journey started in 2016 while i started Docker in 2022.</p>
+        <p>Additionally I write Yuri webnovels and read books in my free time. I'm mildly obsessed with Vector from Girls Frontline and Symboli Rudolf from Umamusume. I love everything with stars and planets and space in general.</p>
+        <p>If you want to know what i play you can find Steam profile or my entire music history on these sites as well as under here in the discord status.</p>
+        <p>0 User's connected</p>
+    </div>
+    
+    <!-- Discord Status -->
+    <div>
+        <img src="https://lanyard-profile-readme.vercel.app/api/YOUR_DISCORD_ID?theme=dark" alt="Discord Status">
+    </div>
+    
+    <div class="playlists">
+        ✦•┈๑⋅⋯ My playlists ⋯⋅๑┈·✦
+        <br>
+        <a href="[Your Steam URL, e.g., https://steamcommunity.com/id/yourname]">Steam</a> |
+        <a href="[Your Playlist 1 URL, e.g., https://open.spotify.com/playlist/yourid]">Playlist 1</a> |
+        <a href="[Your Playlist 2 URL, e.g., https://open.spotify.com/playlist/yourid]">Playlist 2</a> |
+        <a href="https://scrobble.egirl.ing">LastFM</a>
+    </div>
+    
+    <!-- GIFs from Your Previous Request -->
+    <div class="gifs">
+        <img src="https://media.giphy.com/media/IXnygGeB6LPPi/giphy.gif" alt="Cyber Vibe" width="200">
+        <img src="https://media.giphy.com/media/RDZo7znAdn2u7sAcWH/giphy.gif" alt="Hacking Mode" width="200">
+    </div>
+    
+    <!-- Cybersecurity Badges -->
+    <div class="badges">
+        <img src="https://img.shields.io/badge/-Python-3776AB?logo=python" alt="Python">
+        <img src="https://img.shields.io/badge/-Nmap-4682B4" alt="Nmap">
+        <img src="https://img.shields.io/badge/-Wireshark-1679A7" alt="Wireshark">
+        <img src="https://img.shields.io/badge/-Metasploit-FF0000" alt="Metasploit">
+        <img src="https://img.shields.io/badge/-Burp_Suite-FF5733" alt="Burp Suite">
+        <img src="https://img.shields.io/badge/-Kali_Linux-557C94" alt="Kali Linux">
+        <img src="https://img.shields.io/badge/-John_the_Ripper-FF4500" alt="John the Ripper">
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const options = { timeZone: 'Europe/Berlin', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+            document.getElementById('clock').innerHTML = now.toLocaleTimeString('en-US', options);
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>
