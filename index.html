@@ -73,6 +73,11 @@
       bottom: 0;
       left: 0;
       z-index: -1;
+      background-image: url('/../wallpaper-rj2pk4k2-rj2pk4k2.jpg'), url('https://wallpapers.com/images/hd/death-note-light-yagami-as-kira-mg7rmihc6dqngb0f.jpg');
+      background-blend-mode: overlay;
+      background-repeat: no-repeat, no-repeat;
+      background-position: center, center;
+      opacity: 1;
     }
 
     #background-video {
@@ -96,6 +101,19 @@
       margin: auto;
       width: 90%;
       max-width: 48rem;
+    }
+
+    #flex-styled {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+    }
+
+    #flex-styled iframe {
+      flex: 1;
+      min-width: 0;
     }
   </style>
 
@@ -152,7 +170,7 @@
         <p id="question">Birthday</p>
         <span id="modal" class="birthday">
           <script async>
-            let start = new Date('2007-08-23'); // Updated to 23rd August 2007
+            let start = new Date('2007-08-23');
             let now = new Date();
             let defaultText = true;
             let birthday = document.querySelector('.birthday');
@@ -219,11 +237,11 @@
     <div id="flex-styled">
       <iframe data-testid="embed-iframe" style="border-radius: 12px"
         src="https://open.spotify.com/embed/playlist/1Ny27VPYelZtlXv5O28jao?utm_source=generator&theme=0"
-        width="80%" height="352" frameborder="0" allowfullscreen=""
+        width="45%" height="352" frameborder="0" allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       <iframe data-testid="embed-iframe" style="border-radius: 12px"
         src="https://open.spotify.com/embed/playlist/5A6NuHrhJcDnyRHOSG0Kjn?utm_source=generator&theme=0"
-        width="80%" height="352" frameborder="0" allowfullscreen=""
+        width="45%" height="352" frameborder="0" allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
   </div>
