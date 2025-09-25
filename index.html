@@ -33,6 +33,7 @@
       margin: 0;
       padding: 0;
       overflow-x: hidden;
+      background: #1a1a1a; /* Dark base to match Death Note theme */
     }
 
     body {
@@ -40,10 +41,10 @@
       overflow-y: auto;
       position: relative;
       scroll-behavior: smooth;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', 'Arial', sans-serif;
       font-weight: 400;
       font-style: normal;
-      color: rgb(240, 230, 230);
+      color: #e0d0d0; /* Light gray for contrast */
     }
 
     * {
@@ -52,21 +53,29 @@
 
     h2 {
       font-weight: 700;
+      color: #ff4d4d; /* Red hue for Death Note vibe */
     }
 
     p {
       font-size: clamp(0.9em, 1vw, 1.3em);
+      color: #d0e0e0; /* Soft contrast color */
     }
 
     a {
       font-weight: 600;
       text-underline-offset: 2px;
+      color: #ff8c8c; /* Light red for links */
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #ff3333; /* Darker red on hover */
     }
 
     #wallpaper {
       background-size: cover;
       background-position: center;
-      filter: brightness(30%);
+      filter: brightness(25%) contrast(120%); /* Darker, more dramatic */
       position: fixed;
       top: 0;
       right: 0;
@@ -77,7 +86,7 @@
       background-blend-mode: overlay;
       background-repeat: no-repeat, no-repeat;
       background-position: center, center;
-      opacity: 1;
+      opacity: 0.9;
     }
 
     #background-video {
@@ -88,7 +97,7 @@
       min-height: 100%;
       object-fit: cover;
       z-index: -1;
-      opacity: 1;
+      opacity: 0.8;
       transition: opacity 0.5s ease-in-out;
       pointer-events: none;
     }
@@ -101,6 +110,9 @@
       margin: auto;
       width: 90%;
       max-width: 48rem;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+      border-radius: 10px;
     }
 
     #flex-styled {
@@ -114,6 +126,14 @@
     #flex-styled iframe {
       flex: 1;
       min-width: 0;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 77, 77, 0.5); /* Red shadow for theme */
+    }
+
+    #head-hr {
+      color: #ff4d4d;
+      font-size: 1.2em;
+      text-shadow: 1px 1px 5px #ff3333;
     }
   </style>
 
@@ -129,12 +149,12 @@
   </div>
   <div class="box-body">
     <p id="head-hr">・———— ・ ✦ Light Selene ✦ ・———— ・</p>
-    <hr />
+    <hr style="border-color: #ff4d4d;" />
     <div id="spacer"></div>
     <div class="marginalized">
       <div id="smallbox">
-        <p id="question">Current Local Time</p>
-        <span id="modal" class="time">
+        <p id="question" style="color: #ff8c8c;">Current Local Time</p>
+        <span id="modal" class="time" style="color: #d0e0e0; text-shadow: 1px 1px 3px #ff3333;">
           <script>
             function clock() {
               let current = new Date();
@@ -154,21 +174,21 @@
             clock();
             setInterval(clock, 1000);
           </script>
-          <span class="tooltiptext">+1 CEST</span>
+          <span class="tooltiptext" style="color: #ff8c8c;">+1 CEST</span>
         </span>
       </div>
       <div id="smallbox">
         <div style="display: flex; align-items: center; justify-content: center;">
           <img id="discord-decoration" />
-          <img id="discord-profilepic" src="/../placeholder-hzxrash1-hzxrash1.png" />
+          <img id="discord-profilepic" src="/../placeholder-hzxrash1-hzxrash1.png" style="border: 2px solid #ff4d4d;" />
         </div>
-        <p id="question">
+        <p id="question" style="color: #ff8c8c;">
           <span id="discord-tag">Hey, thats me ૮ ˶ᵔ ᵕ ᵔ˶ ა</span>
         </p>
       </div>
       <div id="smallbox">
-        <p id="question">Birthday</p>
-        <span id="modal" class="birthday">
+        <p id="question" style="color: #ff8c8c;">Birthday</p>
+        <span id="modal" class="birthday" style="color: #d0e0e0; text-shadow: 1px 1px 3px #ff3333;">
           <script async>
             let start = new Date('2007-08-23');
             let now = new Date();
@@ -189,39 +209,39 @@
               }
             });
           </script>
-          <span class="tooltiptext">23rd August 2007</span>
+          <span class="tooltiptext" style="color: #ff8c8c;">23rd August 2007</span>
         </span>
       </div>
     </div>
     <div id="spacer"></div>
     <div id="nothing-message">
-      <p>Currently doing nothing...</p>
+      <p style="color: #d0e0e0;">Currently doing nothing...</p>
     </div>
     <div id="discord-box" class="gamestatus" style="display: none">
       <img id="gameimg" alt="game" src="/../placeholder-hzxrash1-hzxrash1.png" />
       <div id="textbox">
-        <p id="playing"></p>
-        <p id="playing2"></p>
-        <p id="playing3"></p>
+        <p id="playing" style="color: #ff8c8c;"></p>
+        <p id="playing2" style="color: #d0e0e0;"></p>
+        <p id="playing3" style="color: #d0e0e0;"></p>
       </div>
     </div>
     <div id="spacer"></div>
     <div id="alignment-left">
-      <p>
+      <p style="color: #d0e0e0;">
         My Name is Light, i'm a Transbian from Germany. I went to the
         <a href="https://www.hs-mannheim.de/">Hochschule Mannheim</a> for
         a whole 3 Semesters of Computer Science. I quit in 2024 and now
         do vocational training for servers and network stuff. My Linux
         journey started in 2016 while i started Docker in 2022.
       </p>
-      <p>
+      <p style="color: #d0e0e0;">
         Additionally I write <a href="https://archiveofourown.org/users/yourusername">Yuri webnovels</a> and read books
         in my free
         time. I'm midly obssessed with Vector from Girls Frontline and
         Symboli Rudolf from Umamusume. I love everything with stars and
         planets and space in general.
       </p>
-      <p>
+      <p style="color: #d0e0e0;">
         If you want to know what i play you can find
         <a href="https://steamcommunity.com/id/yourname/">Steam profile</a>
         or my
@@ -230,10 +250,10 @@
       </p>
     </div>
     <div id="spacer"></div>
-    <p style="display: none !important;" id="usercount" style="margin: 0; text-shadow: 2px 2px 3px #000;">0 User's
+    <p style="display: none !important;" id="usercount" style="margin: 0; text-shadow: 2px 2px 3px #ff3333;">0 User's
       connected</p>
     <div id="spacer"></div>
-    <p2 id="head-hr" style="margin: 5px">✦•┈๑⋅⋯ My playlists ⋯⋅๑┈·✦</p2>
+    <p2 id="head-hr" style="margin: 5px; color: #ff4d4d;">✦•┈๑⋅⋯ My playlists ⋯⋅๑┈·✦</p2>
     <div id="flex-styled">
       <iframe data-testid="embed-iframe" style="border-radius: 12px"
         src="https://open.spotify.com/embed/playlist/1Ny27VPYelZtlXv5O28jao?utm_source=generator&theme=0"
